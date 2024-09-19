@@ -4,7 +4,9 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ClassController;
 
-Route::get('/login', [AuthController::class, 'loginForm'])->name('login');
+Route::get('/', function () {
+    return 'Hello';
+});
 Route::get('/login', [AuthController::class, 'loginForm'])->name('login');
 Route::post('/login', [AuthController::class, 'submitLogin'])->name('login.submit');
 Route::get('/otp', [AuthController::class, 'otpForm'])->name('verify.otp');
